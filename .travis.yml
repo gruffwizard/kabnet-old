@@ -1,3 +1,15 @@
 language: go
 go:
  - 1.12.x
+os:
+- linux
+- osx
+deploy:
+  - provider: releases
+    skip_cleanup: true
+    on:
+      tags: true
+      branch: master
+    file: kabnet
+    api_token:
+      secure: "XJMOoB4l9rRcBZjcWC1iQECbt8nJvHepHu6DlBCvr5fUIS/Nx9636FYYSzu39Grtogp6v0AN629qUZQLG2I1DcKGrjxTrxbiFbRMLgJwdzsUJRRxI29QnB0cyjbRwlqJ7hvilOCW/PaIlpWomv1jK8iDLT0QRf7N1Sh4f85RbCHwHQT03AVpFluvYi0lZ4+UEvWp6mY+ss/Onvj/jdR08QUCF1GrSwy4zBAUiyXBKO4bfi4gz9OH9MfW7PKbJdvTi0cKuKjpyxvB224DpOrJmNZN2l1T+K02UKRaAaByyIgD6mty5JvIrcAwctkhA/sX81JSjY8oGmMpD336V7ZAMUrJdQAAuQc5tc6bRMKjRKImw+UPZnU3oRaIRU3ezSTeMlS9TYCfWcSt/kB39y+Cgf8m/fp2pEp9Ay8epIStqlWem+nc8+RoncYpDijHTz+euI2eJfw91xaXDgIXEvdty46OSqE8V+78I5WU4pefI6adbGXUF0NsJ3AdLsxkbL9GjtnFSOMsrwE/ZCDz0UGXWXLBJil4cn5A8eoYaJWqw0Xl2Z/venQFpB5iYxWQvQ7cNT2bIqZ2jid9HzsbUgmiK7mBoJRSTEkWUJZ2u0lQufPxMrzZ/9jHKO1FNAfEgiyHM0/t/piTUElDAyJBaBlebA2N5prO/3gX57GzAQlorE4="
