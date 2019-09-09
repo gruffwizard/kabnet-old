@@ -8,7 +8,11 @@ import (
 )
 
 
+var (
+    VERSION = "latest"
+)
 
 func main() {
+  cmd.Version=VERSION
   cmd.Execute()
 }

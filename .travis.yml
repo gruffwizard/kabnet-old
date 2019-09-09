@@ -4,6 +4,8 @@ go:
 os:
 - linux
 - osx
+script:
+- "./build.sh"
 deploy:
   - provider: releases
     skip_cleanup: true

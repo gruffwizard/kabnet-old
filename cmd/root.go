@@ -8,9 +8,7 @@ import (
 
 )
 
-
-var cfgFile string
-
+var Version string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -33,10 +31,20 @@ func Execute() {
 
 func init() {
   cobra.OnInitialize(initConfig)
+
+  rootCmd.AddCommand(versionCmd)
 }
 
 
-// initConfig reads in config file and ENV variables if set.
+var versionCmd = &cobra.Command{
+  Use:   "version",
+  Short: "version",
+  Long:  "version",
+
+ Run: func(cmd *cobra.Command, args []string) {
+   fmt.Printf("kabnet version %s\n",Version)
+}, }
+
 func initConfig() {
 
 }
